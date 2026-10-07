@@ -1,0 +1,327 @@
+/* Mijn CSS voor de website */
+
+body {
+	margin: 0;
+	font-family: "Roboto", Arial, sans-serif;
+	background-color: #f2f2f2;
+	color: #333;
+	line-height: 1.6;
+	word-spacing: 0.1em;
+}
+
+
+/* Kopteksten */
+
+h1,
+h2,
+h3 {
+	letter-spacing: 0.05em;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+
+/* Navigatie */
+
+header {
+	background-color: #1d5c63;
+	color: white;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 30px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+}
+
+nav li {
+	margin-left: 20px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: yellow;
+}
+
+nav a:active {
+	color: orange;
+}
+
+
+/* Homepagina */
+
+#home {
+	position: relative;
+	padding: 70px 30px;
+	max-width: 800px;
+	margin: auto;
+}
+
+#home h1 {
+	font-size: 3em;
+}
+
+#home a {
+	background-color: orange;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #cc7000;
+}
+
+
+/* Hoofdinhoud */
+
+main > section {
+	padding: 40px 30px;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.home-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 30px;
+}
+
+.page-title {
+	text-align: center;
+}
+
+.intro {
+	text-indent: 2em;
+}
+
+
+/* Afbeeldingen */
+
+figure {
+	margin: 20px 0;
+	border-color: #1d5c63;
+	border-style: double;
+	border-width: 5px;
+	background-color: white;
+}
+
+figure img {
+	width: 100%;
+	display: block;
+}
+
+figcaption {
+	padding: 10px;
+	font-style: italic;
+}
+
+
+/* Steden */
+
+.cities {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 15px;
+	padding: 40px 30px;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.cities article {
+	background-color: white;
+	padding: 15px;
+	border: 1px solid #ccc;
+}
+
+
+/* Zijkant */
+
+aside {
+	background-color: white;
+	padding: 20px;
+	border: 2px solid #1d5c63;
+}
+
+aside li {
+	float: left;
+	margin-right: 20px;
+}
+
+
+/* Tabel */
+
+.table-section {
+	max-width: 1000px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	border: 1px solid #999;
+	padding: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #CFF;
+}
+
+tr:nth-child(odd) {
+	background-color: #FFF;
+}
+
+
+/* Cultuur */
+
+.culture-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	background-color: #e8f3f3;
+}
+
+
+/* Eerste letter */
+
+.intro::first-letter {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+/* Contactformulier */
+
+.contact-section {
+	max-width: 700px;
+}
+
+fieldset {
+	border-color: #1d5c63;
+	border-style: double;
+	border-width: 4px;
+	padding: 20px;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 8px;
+}
+
+textarea {
+	height: 80px;
+}
+
+input[type="submit"] {
+	display: block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: orange;
+	color: white;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background-color: #cc7000;
+}
+
+
+/* Cookie melding */
+
+#cookies {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 9999;
+	padding: 10px;
+}
+
+
+/* Voettekst */
+
+footer {
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+
+/* Computer */
+
+@media (min-width: 769px) {
+
+	.mobile-text {
+		display: none;
+	}
+
+}
+
+
+/* Smartphone */
+
+@media (max-width: 768px) {
+
+	nav {
+		display: block;
+	}
+
+	nav ul {
+		padding: 0;
+	}
+
+	nav li {
+		margin: 10px 10px 0 0;
+	}
+
+	.home-content,
+	.culture-content {
+		display: block;
+	}
+
+	.cities {
+		display: block;
+	}
+
+	.cities article {
+		margin-bottom: 15px;
+	}
+
+	#home h1 {
+		font-size: 2em;
+	}
+
+	#cookies {
+		left: 10px;
+		right: 10px;
+	}
+
+	.desktop-text {
+		display: none;
+	}
+
+}
